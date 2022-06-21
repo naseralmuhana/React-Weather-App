@@ -46,7 +46,7 @@ export const FavoritesResult = styled.div`
   display: flex;
   flex-direction: column;
   position: absolute;
-  background-color: ${({ theme }) => theme.forecastPanelBgColor};
+  background: ${({ theme }) => theme.searchSuggestion.backgroundColor};
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
   width: 98%;
   max-height: 264.6px;
