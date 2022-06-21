@@ -43,6 +43,11 @@ const Search = () => {
     fetchCities(searchTerm).then((data) => setSuggestions(data))
   }, [searchTerm])
 
+  // useEffect(() => {
+  //   dispatch(fetchWeather("Amman"))
+  //   return () => {}
+  // }, [dispatch])
+
   return (
     <SearchElement>
       <SearchIcon />

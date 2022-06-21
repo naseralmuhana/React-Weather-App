@@ -12,6 +12,9 @@ export const HeaderContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  @media (max-width: 600px) {
+    flex-wrap: wrap;
+  }
 `
 export const CurrentWeatherContainer = styled.div`
   display: flex;

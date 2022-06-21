@@ -4,8 +4,7 @@ import { useDispatch, useSelector } from "react-redux"
 import { HighIcon, HumidityIcon, LowIcon, PressureIcon, WindIcon } from "../../assets"
 import { changeTempUnit } from "../../store"
 import { kmToMile } from "../../utils"
-import SectionTitle from "../UI/SectionTitle"
-import ToggleSwitch from "../UI/ToggleSwitch"
+import { FavoriteBtn, SectionTitle, ToggleSwitch } from ".."
 // prettier-ignore
 import { Temperature, WeatherDegree, WeatherIcon, WeatherInfoRow } from "./components"
 // prettier-ignore
@@ -34,18 +33,19 @@ const CurrentWeather = () => {
       <HeaderContainer>
         <SectionTitle title="Current Weather" />
         <ToggleSwitch onClick={handleTempUnit} />
+        <FavoriteBtn cityName={weather.name} />
       </HeaderContainer>
       <CurrentWeatherContainer>
         <CurrentWeatherStatus>
-          <h4>{weather?.name}</h4>
+          <h4>{weather.name}</h4>
           <CurrentWeatherDetails>
-            <WeatherIcon code={weather?.weather.id} big />
+            <WeatherIcon code={weather.weather.id} big />
             <span>
               <Temperature value={weather.main.temp} />
               <sup>&deg;</sup>
             </span>
           </CurrentWeatherDetails>
-          <h6>{weather?.weather.description}</h6>
+          <h6>{weather.weather.description}</h6>
         </CurrentWeatherStatus>
         <CurrentWeatherInfo>
           <FeelsLike>

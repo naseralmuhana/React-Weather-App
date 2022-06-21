@@ -9,6 +9,7 @@ export const lightTheme = {
     color2: "#38C8E6",
   },
   panelBgColor: "#FFFFFF",
+  panelBgColorHovered: "rgba(255, 255, 255, 0.75)",
   panelTitleColor: "#727E8E",
   forecastPanelBgColor: "rgba(255, 255, 255, 0.75)",
   searchInput: {
@@ -45,6 +46,7 @@ export const darkTheme = {
     color2: "#02101D",
   },
   panelBgColor: "#051A33",
+  panelBgColorHovered: "#051A43",
   panelTitleColor: "#216397",
   forecastPanelBgColor: "rgba(5, 26, 51, 0.75)",
   searchInput: {

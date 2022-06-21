@@ -5,6 +5,7 @@ export const GlobalStyles = createGlobalStyle`
 ::-webkit-scrollbar {
   width: 10px;
   background-color: ${({ theme }) => theme.scrollBar.backgroundColor}
+
 }
 ::-webkit-scrollbar-thumb {
   background-color: ${({ theme }) => theme.scrollBar.thumbBackground};
@@ -16,6 +17,12 @@ export const GlobalStyles = createGlobalStyle`
 }
 ::-webkit-scrollbar-thumb:active {
   background-color: ${({ theme }) => theme.scrollBar.thumbBackgroundActive};
+}
+@media (max-width: 600px) {
+  ::-webkit-scrollbar {
+  width: 5px;
+}
+
 }
 *,
 *::before,

@@ -2,8 +2,12 @@ import styled from "styled-components"
 import { SearchIconSvg, LocationIconSvg } from "../../assets"
 
 export const SearchElement = styled.div`
+  @media (max-width: 768px) {
+    flex: 2;
+  }
+  flex: 3;
   position: relative;
-  z-index: 1;
+  z-index: 3;
   display: flex;
   align-items: center;
   margin-bottom: 1.4rem;
@@ -55,6 +59,7 @@ export const SearchResult = styled.div`
   width: 98%;
   max-height: 264.6px;
   left: 1%;
+  z-index: 3;
   top: 3.35rem;
   border-radius: 5px;
   overflow-x: hidden;

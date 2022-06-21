@@ -1,13 +1,16 @@
 import styled from "styled-components"
+import { useDispatch } from "react-redux"
 import { fetchWeather } from "../../store"
 
-const Suggestion = ({ label, hideSuggestionFn, dispatch }) => {
+const Suggestion = ({ label, hideSuggestionFn }) => {
+  const dispatch = useDispatch()
   const handleClickSuggestion = () => {
-    dispatch(fetchWeather(label.split(",")[0]))
+    dispatch(fetchWeather(label))
     setTimeout(() => {
       hideSuggestionFn()
     }, 400)
   }
+
   return (
     <SuggestionItem onClick={handleClickSuggestion}>{label}</SuggestionItem>
   )

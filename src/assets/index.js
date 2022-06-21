@@ -30,3 +30,5 @@ export { ReactComponent as LowIcon } from "./svg/low-icon.svg"
 export { ReactComponent as HumidityIcon } from "./svg/humidity-icon.svg"
 export { ReactComponent as PressureIcon } from "./svg/pressure-icon.svg"
 export { ReactComponent as WindIcon } from "./svg/wind-icon.svg"
+
+export { ReactComponent as FavoriteIconSvg } from "./svg/favorite-icon.svg"

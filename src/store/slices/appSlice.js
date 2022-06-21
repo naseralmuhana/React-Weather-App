@@ -4,6 +4,7 @@ const initialState = {
   tempUnit: "celcius",
   isLoading: false,
   isInitial: true,
+  favorites: JSON.parse(localStorage.getItem("favorites")) || [],
   darkMode: JSON.parse(localStorage.getItem("darkMode")),
 }
 
@@ -24,8 +25,23 @@ export const appSlice = createSlice({
     setIsInitial: (state, action) => {
       state.isInitial = action.payload
     },
+    addToFavorite: (state, action) => {
+      const city = action.payload
+      if (state.favorites?.includes(city)) {
+        state.favorites = state.favorites.filter((c) => c !== city)
+        localStorage.setItem("favorites", JSON.stringify(state.favorites))
+      } else {
+        state.favorites.push(city)
+        localStorage.setItem("favorites", JSON.stringify(state.favorites))
+      }
+    },
   },
 })
 
-export const { changeTempUnit, toggleDarkMode, setIsLoading, setIsInitial } =
-  appSlice.actions
+export const {
+  changeTempUnit,
+  toggleDarkMode,
+  setIsLoading,
+  setIsInitial,
+  addToFavorite,
+} = appSlice.actions
