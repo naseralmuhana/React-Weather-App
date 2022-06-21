@@ -1,11 +1,13 @@
 import styled from "styled-components"
 import { Temperature, WeatherIcon } from "../CurrentWeather/components"
+import { useMediaQuery } from "react-responsive"
 
 const ForecastItem = ({ item }) => {
   const { day, temp, weather } = item
+  const isSmallScreen = useMediaQuery({ query: "(max-width: 600px)" })
   return (
     <ForecastItemContainer>
-      <h6>{day}</h6>
+      <h6>{isSmallScreen ? day.substring(0, 3) : day}</h6>
       <WeatherIcon code={weather.id} />
       <p>{weather.main}</p>
       <span>

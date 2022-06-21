@@ -32,7 +32,7 @@ const CurrentWeather = () => {
   return (
     <WeatherContainer>
       <HeaderContainer>
-        <SectionTitle>Current Weather</SectionTitle>
+        <SectionTitle title="Current Weather" />
         <ToggleSwitch onClick={handleTempUnit} />
       </HeaderContainer>
       <CurrentWeatherContainer>

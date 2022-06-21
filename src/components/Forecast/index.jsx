@@ -8,10 +8,11 @@ const Forecast = () => {
     isInitial: state.app.isInitial,
     forecast: state.weather.extendedWeatherData,
   }))
+
   if (isInitial) return <></>
   return (
     <ForecastContainer>
-      <SectionTitle>Extended Forecast</SectionTitle>
+      <SectionTitle title="Extended Forecast" />
       <ForecastItems>
         {forecast.map((item, i) => (
           <ForecastItem key={i} item={item} />

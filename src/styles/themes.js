@@ -27,6 +27,13 @@ export const lightTheme = {
   },
   smallIconColor: "#A1B9CE",
   smallIconTextColor: "#7B98B2",
+
+  scrollBar: {
+    backgroundColor: "#FFFFFF",
+    thumbBackground: "#38C8E6",
+    thumbBackgroundHover: "#41b8d1",
+    thumbBackgroundActive: "#63d3eb",
+  },
 }
 
 export const darkTheme = {
@@ -56,4 +63,10 @@ export const darkTheme = {
   },
   smallIconColor: "#153C5E",
   smallIconTextColor: "#3975AB",
+  scrollBar: {
+    backgroundColor: "#051A33",
+    thumbBackground: "#2F5D8A",
+    thumbBackgroundHover: "#20546a",
+    thumbBackgroundActive: "#216397",
+  },
 }

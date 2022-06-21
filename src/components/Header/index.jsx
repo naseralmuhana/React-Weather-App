@@ -18,7 +18,7 @@ const Header = () => {
           onChange={() => dispatch(toggleDarkMode())}
           size={60}
         />
-        <GithubLink href="http://www.github.com/naseralmuhana">
+        <GithubLink href="https://github.com/naseralmuhana/React-Weather-App">
           <GithubIconSvg />
         </GithubLink>
       </HeaderIconsContainer>

@@ -1,6 +1,22 @@
 import { createGlobalStyle } from "styled-components"
 
 export const GlobalStyles = createGlobalStyle`
+
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: ${({ theme }) => theme.scrollBar.backgroundColor}
+}
+::-webkit-scrollbar-thumb {
+  background-color: ${({ theme }) => theme.scrollBar.thumbBackground};
+  border-radius: 10px;
+  transition: 0.3s;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: ${({ theme }) => theme.scrollBar.thumbBackgroundHover};
+}
+::-webkit-scrollbar-thumb:active {
+  background-color: ${({ theme }) => theme.scrollBar.thumbBackgroundActive};
+}
 *,
 *::before,
 *::after {

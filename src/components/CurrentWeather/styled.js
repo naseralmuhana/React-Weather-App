@@ -28,6 +28,9 @@ export const CurrentWeatherStatus = styled.div`
   @media (max-width: 800px) {
     margin: 2rem 0rem;
   }
+  @media (max-width: 320px) {
+    align-items: center;
+  }
   h4 {
     font-size: 1.25rem;
     font-weight: 600;
@@ -42,6 +45,13 @@ export const CurrentWeatherStatus = styled.div`
 `
 export const CurrentWeatherDetails = styled.div`
   display: flex;
+  @media (max-width: 320px) {
+    flex-direction: column;
+    align-items: center;
+    span {
+      margin-bottom: 1rem;
+    }
+  }
   span {
     font-weight: 200;
     font-size: 7rem;
@@ -58,6 +68,9 @@ export const CurrentWeatherInfo = styled.div`
   flex-direction: column;
   margin: 2rem 1rem;
   margin-left: 2rem;
+  @media (max-width: 320px) {
+    margin: 1rem 1rem 1rem 0rem;
+  }
 `
 export const FeelsLike = styled.p`
   font-size: 1.25rem;

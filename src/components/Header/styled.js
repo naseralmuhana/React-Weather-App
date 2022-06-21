@@ -9,6 +9,12 @@ export const HeaderContainer = styled.header`
 export const Title = styled.h1`
   color: ${({ theme }) => theme.appTitleColor};
   font-size: 2.2rem;
+  @media (max-width: 600px) {
+    font-size: 2.1rem;
+  }
+  @media (max-width: 320px) {
+    font-size: 1.6rem;
+  }
 `
 export const HeaderIconsContainer = styled.div`
   display: flex;

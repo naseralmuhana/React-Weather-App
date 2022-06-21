@@ -47,7 +47,27 @@ export const forecastUtils = (res) => {
     })
   })
 
-  return forecast
+  let updatedForecast = []
+  const currentDay = new Date().toLocaleDateString(undefined, {
+    weekday: "long",
+  })
+
+  for (let index = 0; index < forecast.length; index++) {
+    const element = forecast[index]
+    if (element.day === currentDay) {
+      continue
+    }
+
+    if (updatedForecast.length === 0) {
+      updatedForecast.push(element)
+    } else if (
+      updatedForecast[updatedForecast.length - 1].day !== element.day
+    ) {
+      updatedForecast.push(element)
+    }
+  }
+
+  return updatedForecast
 }
 
 export const selectWeatherIcon = (code, favicon = false) => {
