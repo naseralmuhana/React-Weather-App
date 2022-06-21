@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react"
 import { DebounceInput } from "react-debounce-input"
 import { useDispatch } from "react-redux"
-import { fetchCities, fetchWeatherData } from "../../api"
+import { fetchCities } from "../../api"
 import { useClickOutside } from "../../hooks"
 import { fetchWeather } from "../../store"
 // prettier-ignore

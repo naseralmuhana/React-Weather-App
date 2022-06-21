@@ -13,6 +13,16 @@ export const Title = styled.h1`
 export const HeaderIconsContainer = styled.div`
   display: flex;
   align-items: center;
+  button > div {
+    margin-top: -35.7px !important;
+    & > div {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      margin: 0px auto;
+      outline: none;
+    }
+  }
 `
 export const GithubLink = styled.a`
   margin-left: 1rem;
